@@ -1,6 +1,34 @@
+package com.calculator;
+
 import org.junit.Test;
+import org.junit.Assert;
 
 public class CalculatorTest {
     @Test
-    public void addition
+    public void getSumOf2DoubleReturnDouble(double a, double b) {
+        Calculator calculator = new Calculator();
+        double expected = a + b;
+        Assert.assertEquals("Sum (+) is incorrect", expected, calculator.getSum(a, b));
+    }
+
+    @Test
+    public void getDifferenceOf2DoubleReturnDouble(double a, double b) {
+        Calculator calculator = new Calculator();
+        double expected = a - b;
+        Assert.assertEquals("Difference (-) is incorrect", expected, calculator.getDifference(a, b));
+    }
+
+    @Test
+    public void getProductOf2DoubleReturnDouble(double a, double b) {
+        Calculator calculator = new Calculator();
+        double expected = a * b;
+        Assert.assertEquals("Product (*) is incorrect", expected, calculator.getProduct(a, b));
+    }
+
+    @Test
+    public void getQuotientOf2DoubleReturnDouble(double a, double b) {
+        Calculator calculator = new Calculator();
+        double expected = a * b;
+        Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(a, b));
+    }
 }
