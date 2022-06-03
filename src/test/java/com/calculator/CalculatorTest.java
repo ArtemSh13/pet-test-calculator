@@ -28,7 +28,7 @@ public class CalculatorTest {
     @Test
     public void getQuotientOf2DoubleReturnDouble(double a, double b) {
         Calculator calculator = new Calculator();
-        double expected = a * b;
+        double expected = a / b;
         Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(a, b));
     }
 }
