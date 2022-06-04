@@ -31,4 +31,11 @@ public class CalculatorTest {
         double expected = a / b;
         Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(a, b));
     }
+
+    @Test
+    public void getExceptionViaDivisionByZero(double a) {
+        Calculator calculator = new Calculator();
+        Exception thrown = Assert.assertThrows(Exception.class, () -> calculator.getQuotient(a, 0));
+        Assert.assertEquals("Invalid exception message", "Error: division by zero", thrown.getMessage());
+    }
 }
