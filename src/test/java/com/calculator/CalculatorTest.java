@@ -10,6 +10,8 @@ public class CalculatorTest {
     private final double firstNumber;
     private final double secondNumber;
 
+    private final double delta = 0.0000000001;
+
     public CalculatorTest(double firstNumber, double secondNumber) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
@@ -67,28 +69,28 @@ public class CalculatorTest {
     public void getSumOf2DoubleReturnDouble() {
         Calculator calculator = new Calculator();
         double expected = firstNumber + secondNumber;
-        Assert.assertEquals("Sum (+) is incorrect", expected, calculator.getSum(firstNumber, secondNumber));
+        Assert.assertEquals("Sum (+) is incorrect", expected, calculator.getSum(firstNumber, secondNumber), delta);
     }
 
     @Test
     public void getDifferenceOf2DoubleReturnDouble() {
         Calculator calculator = new Calculator();
         double expected = firstNumber - secondNumber;
-        Assert.assertEquals("Difference (-) is incorrect", expected, calculator.getDifference(firstNumber, secondNumber));
+        Assert.assertEquals("Difference (-) is incorrect", expected, calculator.getDifference(firstNumber, secondNumber), delta);
     }
 
     @Test
     public void getProductOf2DoubleReturnDouble() {
         Calculator calculator = new Calculator();
         double expected = firstNumber * secondNumber;
-        Assert.assertEquals("Product (*) is incorrect", expected, calculator.getProduct(firstNumber, secondNumber));
+        Assert.assertEquals("Product (*) is incorrect", expected, calculator.getProduct(firstNumber, secondNumber), delta);
     }
 
     @Test
     public void getQuotientOf2DoubleReturnDouble() throws Exception {
         Calculator calculator = new Calculator();
         double expected = firstNumber / secondNumber;
-        Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(firstNumber, secondNumber));
+        Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(firstNumber, secondNumber), delta);
     }
 
     @Test
