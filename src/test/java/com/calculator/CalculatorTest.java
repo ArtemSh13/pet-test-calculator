@@ -71,28 +71,28 @@ public class CalculatorTest {
     }
 
     @Test
-    public void getDifferenceOf2DoubleReturnDouble(double a, double b) {
+    public void getDifferenceOf2DoubleReturnDouble() {
         Calculator calculator = new Calculator();
         double expected = firstNumber - secondNumber;
         Assert.assertEquals("Difference (-) is incorrect", expected, calculator.getDifference(firstNumber, secondNumber));
     }
 
     @Test
-    public void getProductOf2DoubleReturnDouble(double a, double b) {
+    public void getProductOf2DoubleReturnDouble() {
         Calculator calculator = new Calculator();
         double expected = firstNumber * secondNumber;
         Assert.assertEquals("Product (*) is incorrect", expected, calculator.getProduct(firstNumber, secondNumber));
     }
 
     @Test
-    public void getQuotientOf2DoubleReturnDouble(double a, double b) {
+    public void getQuotientOf2DoubleReturnDouble() throws Exception {
         Calculator calculator = new Calculator();
         double expected = firstNumber / secondNumber;
         Assert.assertEquals("Quotient (/) is incorrect", expected, calculator.getQuotient(firstNumber, secondNumber));
     }
 
     @Test
-    public void getExceptionViaDivisionByZero(double a) {
+    public void getExceptionViaDivisionByZero() {
         Calculator calculator = new Calculator();
         Exception thrown = Assert.assertThrows(Exception.class, () -> calculator.getQuotient(firstNumber, 0));
         Assert.assertEquals("Invalid exception message", "Error: division by zero", thrown.getMessage());
