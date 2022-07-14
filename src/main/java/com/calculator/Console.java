@@ -6,8 +6,8 @@ public class Console {
     public static void main(String[] args) throws Exception {
         System.out.println("Please enter an arithmetic expression like this: a + b");
         Scanner input = new Scanner(System.in);
-        String delimeter = " ";
-        String[] tokens = input.nextLine().split(delimeter);
+        String delimiter = " ";
+        String[] tokens = input.nextLine().split(delimiter);
         Calculator calculator = new Calculator();
         double result = 0.0;
         switch (tokens[1]) {
